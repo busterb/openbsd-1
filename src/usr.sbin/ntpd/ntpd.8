@@ -25,6 +25,7 @@
 .Bk -words
 .Op Fl dnv
 .Op Fl f Ar file
+.Op Fl p Ar file
 .Ek
 .Sh DESCRIPTION
 The
@@ -67,6 +68,9 @@ configured NTP servers to reply.
 This option allows
 .Nm
 to send DEBUG priority messages to syslog.
+.It Fl p Ar file
+Write pid to
+.Ar file
 .El
 .Pp
 .Nm

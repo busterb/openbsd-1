@@ -261,6 +261,7 @@ struct ntpd_conf {
 	u_int8_t					*ca;
 	size_t						ca_len;
 	int						tmpfail;
+	char						*pid_file;
 };
 
 struct ctl_show_status {
