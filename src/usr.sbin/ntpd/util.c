@@ -141,7 +141,7 @@ d_to_sfp(double d)
 char *
 print_rtable(int r)
 {
-	static char b[11];
+	static char b[18];
 
 	b[0] = 0;
 	if (r > 0)
