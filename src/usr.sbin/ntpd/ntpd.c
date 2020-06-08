@@ -163,7 +163,7 @@ main(int argc, char *argv[])
 	int			argc0 = argc, logdest;
 	char			**argv0 = argv;
 	char			*pname = NULL;
-	time_t			 settime_deadline;
+	time_t			 settime_deadline = 0;
 	int			 sopt = 0;
 
 	__progname = get_progname(argv[0]);
