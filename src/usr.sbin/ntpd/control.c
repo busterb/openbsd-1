@@ -39,19 +39,19 @@
 int
 control_check(char *path)
 {
-	struct sockaddr_un	 sun;
+	struct sockaddr_un	 saddr;
 	int			 fd;
 
-	bzero(&sun, sizeof(sun));
-	sun.sun_family = AF_UNIX;
-	strlcpy(sun.sun_path, path, sizeof(sun.sun_path));
+	bzero(&saddr, sizeof(saddr));
+	saddr.sun_family = AF_UNIX;
+	strlcpy(saddr.sun_path, path, sizeof(saddr.sun_path));
 
 	if ((fd = socket(AF_UNIX, SOCK_STREAM, 0)) == -1) {
 		log_debug("control_check: socket check");
 		return (-1);
 	}
 
-	if (connect(fd, (struct sockaddr *)&sun, sizeof(sun)) == 0) {
+	if (connect(fd, (struct sockaddr *)&saddr, sizeof(saddr)) == 0) {
 		log_debug("control_check: socket in use");
 		close(fd);
 		return (-1);
