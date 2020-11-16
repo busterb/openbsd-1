@@ -20,7 +20,6 @@
 #define LOG_H
 
 #include <stdarg.h>
-#include <sys/cdefs.h>
 
 #define LOG_TO_STDERR	(1<<0)
 #define LOG_TO_SYSLOG	(1<<1)
